@@ -1,0 +1,12 @@
+FROM nginx:latest
+LABEL maintainer="hasmukhmistry137@gmail.com"
+
+COPY docker/config/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY docker/config/nginx/default.conf /etc/nginx/conf.d/default.conf
+
+ADD docker/config/nginx/entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+EXPOSE 80
+
+CMD ["/entrypoint.sh"]

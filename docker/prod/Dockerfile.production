@@ -1,0 +1,9 @@
+# local volume will force changes from /app directory to /var/www/html inside docker.
+# for production we need to copy files and execute composer install
+ADD .. /var/www/html
+
+WORKDIR /var/www/html
+
+# Composer install
+RUN set -ex \
+    && composer install --optimize-autoloader --no-scripts --no-progress

@@ -1,0 +1,8 @@
+docker/Dockerfile*
+.git
+.idea
+Vagrantfile
+Jenkinsfile*
+README*
+docker-compose*
+charts

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/roots/wordpress-core-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/roots/wp-config" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/roots/bedrock-autoloader" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/roots/wp-password-bcrypt" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/oscarotero/env" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
