@@ -77,7 +77,7 @@ COPY scripts/ /usr/local/bin/
 RUN chmod +x -R /usr/local/bin/*
 
 # Composer & log directory tweaks
-ENV COMPOSER_HOME=/var/www/.composer
+ARG COMPOSER_HOME=/var/www/.composer
 ARG WEB_USER=www-data
 ARG WP_DEBUG_LOG=/var/www/logs
 
