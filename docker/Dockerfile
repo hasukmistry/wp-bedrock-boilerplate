@@ -6,12 +6,12 @@ LABEL description="Dockerised Wordpress Application"
 RUN apt-get update -y
 
 # Essentials
-RUN apt-get -y install build-essential curl gnupg lsb-release gcc make autoconf libc-dev pkg-config
+RUN apt-get -y install build-essential wget curl gnupg lsb-release gcc make autoconf libc-dev pkg-config
 
 RUN apt-get install -y --no-install-recommends \
     libmagick++-dev \
     libmagickcore-dev libmagickwand-dev \
-    freetds-bin freetds-dev freetds-common libsybdb5 libpq-dev \
+    libc6-dev libsybdb5 libpq-dev \
     libzip-dev \
     libgd-dev libpng++-dev libwebp-dev libjpeg-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libvpx-dev libfreetype6-dev \
     libmcrypt-dev \
@@ -19,8 +19,13 @@ RUN apt-get install -y --no-install-recommends \
     ghostscript
 
 # fix for docker-php-ext-install pdo_dblib
-# https://stackoverflow.com/questions/43617752/docker-php-and-freetds-cannot-find-freetds-in-know-installation-directories
-RUN ln -s /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/
+RUN mkdir /var/www/freetds && \
+    cd /var/www/freetds && \
+    wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.2.tar.gz && \
+    tar -xzf freetds-1.2.tar.gz && \
+    cd freetds-1.2 && \
+    ./configure --prefix=/usr/local --with-tdsver=7.3 && \
+    make install
 
 # https://make.wordpress.org/hosting/handbook/handbook/server-environment/
 RUN docker-php-ext-install exif
